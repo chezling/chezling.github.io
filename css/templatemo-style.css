@@ -1,15 +1,9 @@
-/*
-
-Boxer Template
-
-http://www.templatemo.com/tm-446-boxer
-
-*/
+@import url('https://fonts.googleapis.com/css2?family=Grape+Nuts&display=swap');
 
 body
     {
         background: #fff;
-        font-family: 'Open Sans', sans-serif;
+        font-family: 'Arial', sans-serif;
         font-weight: 300;
         position: relative;
         width: 100%;
@@ -34,7 +28,10 @@ h4
         font-weight: bold;
     }
 /* end h1 group */
-p { line-height: 1.6em; }
+p { 
+    line-height: 1.6em; 
+    font-size: medium;
+}
 /* img */
 img
     {
@@ -97,7 +94,7 @@ img
     {
          width: 30px;
         height: 30px;
-        background-color: #28a7e9;
+        background-color: #007bff;
          margin: 0 auto;
         -webkit-animation: sk-rotatePlane 1.2s infinite ease-in-out;
                 animation: sk-rotatePlane 1.2s infinite ease-in-out;
@@ -140,15 +137,16 @@ img
     }
 .navbar-default .navbar-brand
     {
-        color: #28a7e9;
+        /* color: #007bff; */
         font-size: 30px;
         font-weight: bold;
         height: 70px;
         line-height: 35px;
+        font-family: 'Grape Nuts', cursive;
     }
 .navbar-default .nav li a
     {
-        color: #666;
+        color: #343a40;
         font-size: 13px;
         font-weight: bold;
         height: 70px;
@@ -158,7 +156,7 @@ img
 .navbar-default .nav li a:focus,
 .navbar-default .nav li a.current
     {
-        color: #28a7e9;
+        color: #007bff;
     }
 
 .navbar-default .navbar-toggle
@@ -168,7 +166,7 @@ img
     }
 .navbar-default .navbar-toggle .icon-bar
     {
-        background: #28a7e9;
+        background: #007bff;
         border-color: transparent;
     }
 .navbar-default .navbar-toggle:hover,
@@ -178,7 +176,7 @@ img
 /* start home */       
 #home
     {
-    background: url('../images/home-bg.jpg') no-repeat;
+    background: url('../images/homebg.png') no-repeat;
     background-size: cover;
     color: #fff;
     margin-top: 70px;
@@ -195,10 +193,14 @@ img
     {
         display: inline-block;
         margin-top: 30px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     }
 /* end home */
 
 /* start divider */
+.view-project {
+    font-style: italic;
+}
 #divider
     {
         text-align: center;
@@ -207,7 +209,7 @@ img
     }
 #divider .fa
     {
-        color: #28a7e9;
+        color: #007bff;
         font-size: 60px;
     }
 #divider h3
@@ -233,7 +235,7 @@ img
     }
 #feature .fa
     {
-        background: #28a7e9;
+        background: #007bff;
         border-radius: 50%;
         color: #fff;
         display: inline-block;
@@ -261,7 +263,7 @@ img
     }
 #feature1 .fa
     {
-        background: #28a7e9;
+        background: #007bff;
         border-radius: 50%;
         color: #fff;
         display: inline-block;
@@ -296,7 +298,7 @@ img
     }
 #pricing .pricing .pricing-title
     {
-        background: #28a7e9;
+        background: #007bff;
         color: #fff;
         font-weight: bold;
         padding: 30px;
@@ -319,9 +321,9 @@ img
 #pricing .pricing .btn
     {
         background: transparent;
-        border: 1px solid #28a7e9;
+        border: 1px solid #007bff;
         border-radius: 0px;
-        color: #28a7e9;
+        color: #007bff;
         font-weight: bold;
         padding-right: 40px;
         padding-left: 40px;
@@ -330,7 +332,7 @@ img
         transition: all 0.3s ease;
     }
 #pricing .pricing .btn:hover {
-    background: #28a7e9;
+    background: #007bff;
     color: #fff;
 }
 /* end pricing */
@@ -357,28 +359,31 @@ img
 /* start contact */
 #contact
     {
-        background: url('../images/contact-bg.jpg') no-repeat;
+        background: url('../images/contact-bg.png') no-repeat;
         background-size: cover;
         color: #fff;
+        text-align: center;
     }
 #contact h2
     {
         padding-bottom: 10px;
+        font-weight: normal;
     }
 #contact address
     {
         padding-top: 20px;
     }
-#contact address .fa
+#contact .fa
     {
-        background: #28a7e9;
-        border-radius: 50%;
-        width: 40px;
+        /* background: #007bff;
+        border-radius: 50%; */
+        /* width: 40px;
         height: 40px;
-        line-height: 40px;
+        line-height: 40px; */
         text-align: center;
         margin-top: 6px;
-        margin-right: 10px;
+        font-size: xx-large;
+        /* margin-right: 10px; */
     }
 #contact .contact-form
     {
@@ -397,7 +402,7 @@ img
     }
 #contact input[type="submit"]
     {
-        background: #28a7e9;
+        background: #007bff;
         color: #fff;
         font-weight: bold;
         transition: all 0.3s ease;
@@ -405,6 +410,38 @@ img
 #contact input[type="submit"]:hover {
     background: #107DB6;
 }
+
+#contact-list
+    {
+        display: inline-flex;
+        margin-top: 30px;
+    }
+
+#contact-list a 
+    {
+        width: 100px;
+        height: 100px;
+        text-decoration: none;
+        color: white;
+        margin: 0 10px;
+    }
+
+#linkedin, 
+#email,
+#website,
+#dev {
+        display: none;
+        font-size: 18px;
+        padding-top: 10px;
+      }
+          
+.show-cap:hover + #linkedin, 
+.show-cap:hover + #email,
+.show-cap:hover + #website,
+.show-cap:hover + #dev
+    {
+        display: block;
+    }
 /* end contact */
 
 /* start footer */
@@ -415,6 +452,10 @@ footer
         text-align: center;
         padding: 20px;
     }
+
+footer p {
+    font-size: small;
+}
 /* end footer */
 
 @media screen and ( max-width: 991px ) {
