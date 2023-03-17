@@ -1,9 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Grape+Nuts&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@200&display=swap');
+
 
 body
     {
         background: #fff;
-        font-family: 'Arial', sans-serif;
+        /* font-family: 'Barlow', sans-serif; */
+        font-family: 'Open Sans', sans-serif;
         font-weight: 300;
         position: relative;
         width: 100%;
@@ -15,17 +21,39 @@ body
 	color: #fff;
 }
 
+.txt-center {
+    text-align: center;
+}
+.txt-left {
+    text-align: left;
+}
+
 /* start h1 group */
 h1 { 
     margin-top: 0;
     margin-bottom: 25px; 
+    font-size: 7em;
+    font-family: 'Open Sans', sans-serif;
 }
-h1,
+h2 {
+    font-size: xxx-large;
+}
+h3 {
+    font-size: xx-large;
+}
+h4 {
+    font-size: x-large;
+}
+h5 {
+    font-size: 2rem;
+}
 h2,
 h3,
-h4
+h4,
+h5
     {
-        font-weight: bold;
+        /* font-weight: lighter; */
+        font-family: 'Open Sans', sans-serif;
     }
 /* end h1 group */
 p { 
@@ -38,6 +66,9 @@ img
         max-width: 100%;
         height: auto;
     }
+.img-center {
+    display: inline-block;
+}
 /* img */
 
 /* overlay */
@@ -49,6 +80,18 @@ img
        padding-top: 90px;
        padding-bottom: 90px;
     }  
+
+.work-overlay {
+    width: 100%;
+       height: 100%;
+       background: rgba(0, 0, 0, 0.4);
+       padding-top: 150px;
+       padding-bottom: 150px;
+}
+
+.work-overlay h2 {
+    font-weight: normal;
+}
 /* over lay */
 
 /* start page container */
@@ -137,12 +180,12 @@ img
     }
 .navbar-default .navbar-brand
     {
-        /* color: #007bff; */
-        font-size: 30px;
-        font-weight: bold;
+        color: #333;
+        font-size: x-large;
+        font-weight: light;
         height: 70px;
         line-height: 35px;
-        font-family: 'Grape Nuts', cursive;
+        font-family: 'Barlow', sans-serif;
     }
 .navbar-default .nav li a
     {
@@ -156,14 +199,14 @@ img
 .navbar-default .nav li a:focus,
 .navbar-default .nav li a.current
     {
-        color: #007bff;
+        /* color: #007bff; */
     }
 
 .navbar-default .navbar-toggle
     {
         border: none;
         padding-top: 20px;
-    }
+    }   
 .navbar-default .navbar-toggle .icon-bar
     {
         background: #007bff;
@@ -183,12 +226,23 @@ img
     text-align: center;
     width: 100%;
     }
+#home h2 {
+    font-size: 6rem;
+    padding-bottom: 15px;
+}
 #home p
     {
         font-weight: 400;
         font-style: italic;
         line-height: 2em;
     }
+#home h5 {
+    font-family:   'Bitter', serif;
+    font-style: italic;
+    letter-spacing: 1px;
+    font-size: large;
+    line-height: 3rem;
+}
 #home img
     {
         display: inline-block;
@@ -197,26 +251,34 @@ img
     }
 /* end home */
 
-/* start divider */
+/* start box */
 .view-project {
     font-style: italic;
 }
-#divider
+.view-project a {
+    color: #333;
+}
+
+#box
     {
-        text-align: center;
-        padding-top: 80px;
-        padding-bottom: 80px;
+        /* text-align: center; */
+        margin: 2rem;
     }
-#divider .fa
+#box .fa
     {
         color: #007bff;
         font-size: 60px;
     }
-#divider h3
+#box h4
     {
-        font-size: 20px;
+        font-size: x-large;
     }
-/* end divider */
+
+.templatemo-box{
+    padding-right:5rem;
+    padding-left:5rem;
+}
+/* end box */
 
 /* start feature */
 #feature
@@ -278,15 +340,35 @@ img
 /* start pricing */
 #pricing
     {
-        background: #f8f8f8;
-        text-align: center;
-        padding-top: 80px;
-        padding-bottom: 80px;
+        /* background: #f8f8f8; */
+        padding-top: 2rem;
+        /* padding-bottom: 80px; */
     }
 #pricing h2
     {
         padding-bottom: 60px;
+        font-size: xxx-large;
     }
+#pricing .title {
+    margin-top: -5rem;
+}
+#pricing .title h3{
+    font-family: 'Noto Serif', serif;
+    font-weight: bold;
+    font-size: xxx-large;
+}
+#pricing .header {
+    /* font-weight: bold; */
+    font-size: xx-large;
+    padding-bottom: 1.5rem;
+}
+#pricing p {
+    font-size: large;
+}
+#pricing h5 {
+    font-weight: normal;
+    line-height: 1.5;
+}
 #pricing .pricing
     {
         background: #fff;
@@ -307,16 +389,15 @@ img
     {
         font-size: 20px;
     }
-#pricing .pricing ul
+#pricing ul
     {
         padding: 0;
         margin: 0;
     }
-#pricing .pricing ul li
+#pricing ul li
     {
-        display: block;
-        list-style: none;
-        padding: 16px;
+        list-style-position: inside;
+        font-size: large;
     }
 #pricing .pricing .btn
     {
@@ -334,6 +415,23 @@ img
 #pricing .pricing .btn:hover {
     background: #007bff;
     color: #fff;
+}
+.work-div {
+    margin-bottom: 30px;
+}
+#pricing section {
+    margin-top: 5rem;
+}
+#pricing .row{
+    margin-top: 6rem;
+    margin-bottom: 4rem;
+}
+#pricing .img-isolate{
+    margin-bottom: 2rem;
+}
+#pricing .img-right{
+    padding-top: 8rem;
+    padding-left: 4rem;
 }
 /* end pricing */
 
@@ -431,7 +529,7 @@ img
 #website,
 #dev {
         display: none;
-        font-size: 18px;
+        font-size: medium;
         padding-top: 10px;
       }
           
