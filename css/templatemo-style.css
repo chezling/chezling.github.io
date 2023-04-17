@@ -27,6 +27,17 @@ body
 .txt-left {
     text-align: left;
 }
+.caption{
+    font-size: medium !important; 
+    font-family: 'Bitter', serif;
+    font-weight: bold;
+    font-style: italic;
+}
+ul li{
+    list-style-type: disc;
+    list-style-position: outside;
+    line-height: 160%;
+}
 
 /* start h1 group */
 h1 { 
@@ -69,6 +80,14 @@ img
 .img-center {
     display: inline-block;
 }
+.txt-cross{
+    text-decoration: line-through;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
 /* img */
 
 /* overlay */
@@ -91,6 +110,12 @@ img
 
 .work-overlay h2 {
     font-weight: normal;
+}
+
+.crossline{
+    width: 100%;
+height: 1px;
+border: 1px solid #e3e3e3;
 }
 /* over lay */
 
@@ -219,13 +244,18 @@ img
 /* start home */       
 #home
     {
-    background: url('../images/homebg.png') no-repeat;
     background-size: cover;
     color: #fff;
     margin-top: 70px;
     text-align: center;
     width: 100%;
     }
+.homebg {
+    background: url('../images/homebg.png') no-repeat;
+}
+.imbg {
+    background: url('../images/ItemManagement/headerbg.png') no-repeat;
+}
 #home h2 {
     font-size: 6rem;
     padding-bottom: 15px;
@@ -262,12 +292,13 @@ img
 #box
     {
         /* text-align: center; */
-        margin: 2rem;
+        /* margin: 2rem; */
+        margin-left: 2rem
     }
 #box .fa
     {
-        color: #007bff;
-        font-size: 60px;
+        color: #808080;
+        font-size: x-large;
     }
 #box h4
     {
@@ -275,17 +306,16 @@ img
     }
 
 .templatemo-box{
-    padding-right:5rem;
-    padding-left:5rem;
+    padding-right:3rem;
+    padding-left:3rem;
 }
 /* end box */
 
 /* start feature */
-#feature
+#feature, #feature1
     {
-        background: #f8f8f8;
-        padding-top: 80px;
-        padding-bottom: 80px;
+        padding-top: 100px;
+        padding-bottom: 100px;
     }
 #feature p
     {
@@ -307,14 +337,29 @@ img
         text-align: center;
         margin-right: 20px;
     }
+
+.portfolio1{
+    position:relative;
+    background-color: rgb(252, 246, 232);
+}
+.portfolio1:before {
+    content: ' ';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.1;
+  background-image: url('../images/ItemManagement/homebg.png');
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: cover;
+}
 /* end feature */
 
 /* start feature1 */
-#feature1
-    {
-        padding-top: 60px;
-        padding-bottom: 60px;
-    }
+
 #feature1 p
     {
         padding-top: 10px;
@@ -380,14 +425,16 @@ img
     }
 #pricing .pricing .pricing-title
     {
-        background: #007bff;
-        color: #fff;
-        font-weight: bold;
+        background: #fff;
+        color: #333;
+        /* font-weight: bold; */
         padding: 30px;
+        border-radius: 1rem;
+        box-shadow: 0 0.8rem 2rem -0.07rem rgba(0, 0, 0, 0.1);
     }
 #pricing .pricing .pricing-title p
     {
-        font-size: 20px;
+        margin-top: 40px;
     }
 #pricing ul
     {
@@ -396,7 +443,7 @@ img
     }
 #pricing ul li
     {
-        list-style-position: inside;
+        list-style-position: outside;
         font-size: large;
     }
 #pricing .pricing .btn
@@ -423,7 +470,7 @@ img
     margin-top: 5rem;
 }
 #pricing .row{
-    margin-top: 6rem;
+    margin-top: 8rem;
     margin-bottom: 4rem;
 }
 #pricing .img-isolate{
@@ -433,7 +480,26 @@ img
     padding-top: 8rem;
     padding-left: 4rem;
 }
+#wireframe .row {
+    margin-top: 5rem;
+}
 /* end pricing */
+
+/* #design */
+#design h5 {
+    font-weight: bold;
+    line-height: 1.5;
+    font-size: 2rem;
+}
+#design .img-left {
+    /* padding-top: 2rem; */
+    padding-right: 4rem;
+}
+#design .image-right {
+    /* padding-top: 2rem; */
+    padding-left: 4rem;
+}
+/* End #design */
 
 /* start download */
 #download
