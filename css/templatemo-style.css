@@ -4,14 +4,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bitter:wght@200&display=swap');
 
-
-/* color
-#EBD698
-#F0A495
-#BB8ED6
-#91C6ED
-#8AE39B
-*/
 body
     {
         background: #fff;
@@ -115,6 +107,7 @@ a:hover {
        background: rgba(0, 0, 0, 0.4);
        padding-top: 150px;
        padding-bottom: 150px;
+       color: #fff;
 }
 
 .work-overlay h2 {
@@ -272,6 +265,11 @@ a:hover {
     background-color: #0C90EB;
     color: #fff;
 }
+.webbg {
+    background: url('../images/webui/headerbg.png') no-repeat;
+    background-color: #0C90EB;
+    color: #fff;
+}
 
 #home h2 {
     font-size: 6rem;
@@ -395,12 +393,17 @@ a:hover {
 
 .portfolio1{
     position:relative;
-    background-color: #0C90EB;
+    background-color: #BEDDED;
 }
 
 .portfolio2{
     position:relative;
-    background-color: #EB3B01;
+    background-color: #EBE0C5;
+}
+
+.portfolio3{
+    position:relative;
+    background-color: #F0C7C2;
 }
 
 #portfolio .row {
@@ -456,6 +459,16 @@ a:hover {
   width: calc(100% + 6px);
   height: calc(100% + 6px);
 }
+    /* ------------- */
+
+#portfolio .shadow {
+    box-shadow: 4px 4px 30px 0 rgba(0, 0, 0, 0.15);
+}
+
+#portfolio .block {
+    border:rgba(0, 0, 0, 0.1) solid 0.5px;
+} 
+
 /* end portfolio */
 
 
@@ -643,7 +656,7 @@ a:hover {
     {
         background: url('../images/contact-bg.png') no-repeat;
         background-size: cover;
-        color: #fff;
+        color: #333;
         text-align: center;
     }
 #contact .overlay {
@@ -689,7 +702,7 @@ a:hover {
 #contact input[type="submit"]
     {
         background: #007bff;
-        color: #fff;
+        color: #333;
         font-weight: bold;
         transition: all 0.3s ease;
     }
@@ -708,7 +721,7 @@ a:hover {
         width: 100px;
         height: 100px;
         text-decoration: none;
-        color: white;
+        color: #333;
         margin: 0 10px;
     }
 
