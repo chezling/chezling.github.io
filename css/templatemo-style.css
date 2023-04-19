@@ -1,10 +1,17 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Barlow&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bitter:wght@200&display=swap');
 
 
+/* color
+#EBD698
+#F0A495
+#BB8ED6
+#91C6ED
+#8AE39B
+*/
 body
     {
         background: #fff;
@@ -15,6 +22,7 @@ body
         width: 100%;
         height: 100%;
         overflow-x: hidden;
+        color:#333;
     }
 	
 .tm-white a {
@@ -64,7 +72,8 @@ h4,
 h5
     {
         /* font-weight: lighter; */
-        font-family: 'Open Sans', sans-serif;
+        /* font-family: 'Open Sans', sans-serif; */
+        font-family: 'barlow', sans-serif;
     }
 /* end h1 group */
 p { 
@@ -95,9 +104,9 @@ a:hover {
     {
        width: 100%;
        height: 100%;
-       background: rgba(0, 0, 0, 0.4);
-       padding-top: 90px;
-       padding-bottom: 90px;
+       /* background: rgba(0, 0, 0, 0.4); */
+       padding: 15rem 0;
+
     }  
 
 .work-overlay {
@@ -114,8 +123,8 @@ a:hover {
 
 .crossline{
     width: 100%;
-height: 1px;
-border: 1px solid #e3e3e3;
+    height: 1px;
+    border: 1px solid #e3e3e3;
 }
 /* over lay */
 
@@ -205,7 +214,7 @@ border: 1px solid #e3e3e3;
     }
 .navbar-default .navbar-brand
     {
-        color: #333;
+        color: #4B0082;
         font-size: x-large;
         font-weight: light;
         height: 70px;
@@ -245,17 +254,25 @@ border: 1px solid #e3e3e3;
 #home
     {
     background-size: cover;
-    color: #fff;
+    /* color: #333; */
     margin-top: 70px;
     text-align: center;
     width: 100%;
+    /* background: #fff; */
     }
 .homebg {
-    background: url('../images/homebg.png') no-repeat;
+    background: url('../images/homebg.png') no-repeat ;
+    
 }
 .imbg {
     background: url('../images/ItemManagement/headerbg.png') no-repeat;
 }
+.scmbg {
+    background: url('../images/scm2/headerbg.png') no-repeat;
+    background-color: #0C90EB;
+    color: #fff;
+}
+
 #home h2 {
     font-size: 6rem;
     padding-bottom: 15px;
@@ -266,10 +283,13 @@ border: 1px solid #e3e3e3;
         font-style: italic;
         line-height: 2em;
     }
+#home h3 {
+    font-size: xx-large;
+    line-height: 3rem;
+    font-weight: 600;
+}
 #home h5 {
-    font-family:   'Bitter', serif;
-    font-style: italic;
-    letter-spacing: 1px;
+    margin-top: 2rem;
     font-size: large;
     line-height: 3rem;
 }
@@ -277,8 +297,13 @@ border: 1px solid #e3e3e3;
     {
         display: inline-block;
         margin-top: 30px;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
     }
+#home .avatar {
+    mix-blend-mode: multiply;
+}  
+    
+
 /* end home */
 
 /* start box */
@@ -338,25 +363,101 @@ border: 1px solid #e3e3e3;
         margin-right: 20px;
     }
 
+/* portfolio    */
+#portfolio h3 {
+    font-size: xxx-large;
+    font-weight: 600;
+}
+#portfolio p{
+    font-family: 'Barlow', sans-serif;
+    font-size: x-large;
+}
+#portfolio .btn{
+    background: #fff;
+  border: none;
+  color: #333;
+  font: 500 2rem sans-serif;
+  padding: 1.5rem 3rem;
+  position: relative;
+  cursor: pointer;
+  margin: 2rem;
+  border-radius: 0;
+}
+#portfolio .btn-animation {
+    border: 2px solid #9400D3;
+    outline: 2px solid #fff;
+    transition: outline-offset 200ms ease;
+  }
+  #portfolio .btn-animation:hover {
+    outline: 2px solid #fff;
+    outline-offset: -6px;
+  }
+
 .portfolio1{
     position:relative;
-    background-color: rgb(252, 246, 232);
+    background-color: #0C90EB;
 }
-.portfolio1:before {
-    content: ' ';
-  display: block;
+
+.portfolio2{
+    position:relative;
+    background-color: #EB3B01;
+}
+
+#portfolio .row {
+    margin: 0;
+}
+#portfolio .col-md-6 {
+    padding: 0;
+    position: relative;
+    height: 520px;
+}
+
+#portfolio img {
+    max-width: 70%;
+    height: auto;
+    margin: auto;
+}
+
+.vertical-center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 100%;
+  }
+
+.portfolio-title{
+    padding: 7rem;
+}
+
+.border-animation::before,
+.border-animation::after {
+  content: '';
   position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0.1;
-  background-image: url('../images/ItemManagement/homebg.png');
-  background-repeat: no-repeat;
-  background-position: 50% 0;
-  background-size: cover;
+  width: 24px;
+  height: 24px;
+  border: 0px solid transparent;
 }
-/* end feature */
+.border-animation::before {
+  top: -3px;
+  left: -3px;
+  border-top: 2px solid #9400D3;
+  border-left: 2px solid #9400D3;
+}
+.border-animation::after {
+  bottom: -3px;
+  right: -3px;
+  border-bottom: 2px solid #9400D3;
+  border-right: 2px solid #9400D3;
+}
+.border-animation:hover::before,
+.border-animation:hover::after {
+  width: calc(100% + 6px);
+  height: calc(100% + 6px);
+}
+/* end portfolio */
+
 
 /* start feature1 */
 
@@ -406,6 +507,13 @@ border: 1px solid #e3e3e3;
     /* font-weight: bold; */
     font-size: xx-large;
     padding-bottom: 1.5rem;
+}
+#pricing .shadow{
+    box-shadow: 4px 4px 30px 0 rgba(0, 0, 0, 0.15);
+}
+#pricing .prototype{
+    color: #0D99FF;
+    text-decoration: underline;
 }
 #pricing p {
     font-size: large;
@@ -485,6 +593,11 @@ border: 1px solid #e3e3e3;
 }
 /* end pricing */
 
+
+
+
+
+
 /* #design */
 #design h5 {
     font-weight: bold;
@@ -498,6 +611,11 @@ border: 1px solid #e3e3e3;
 #design .image-right {
     /* padding-top: 2rem; */
     padding-left: 4rem;
+}
+#design .ui {
+   background: rgb(224, 247, 255);
+   padding: 8rem 0 3rem;
+    margin: 0;
 }
 /* End #design */
 
@@ -528,6 +646,10 @@ border: 1px solid #e3e3e3;
         color: #fff;
         text-align: center;
     }
+#contact .overlay {
+    padding: 5rem 0 3rem 0;
+}
+
 #contact h2
     {
         padding-bottom: 10px;
