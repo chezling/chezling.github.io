@@ -222,12 +222,7 @@ a:hover {
         height: 70px;
         line-height: 40px;
     }
-.navbar-default .nav li a:hover,
-.navbar-default .nav li a:focus,
-.navbar-default .nav li a.current
-    {
-        /* color: #007bff; */
-    }
+
 
 .navbar-default .navbar-toggle
     {
