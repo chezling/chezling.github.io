@@ -254,15 +254,22 @@ a:hover {
 }
 .imbg {
     background: url('../images/ItemManagement/headerbg.png') no-repeat;
+    background-color: #FFCD29;
+    color: #fff;
 }
 .scmbg {
     background: url('../images/scm2/headerbg.png') no-repeat;
-    background-color: #0C90EB;
+    background-color: #0D99FF;
     color: #fff;
 }
 .webbg {
     background: url('../images/webui/headerbg.png') no-repeat;
     background-color: #0C90EB;
+    color: #fff;
+}
+.signupbg{
+    background: url('../images/SignUp/headerbg.png') no-repeat;
+    background-color: #14AE5C;
     color: #fff;
 }
 
@@ -399,6 +406,11 @@ a:hover {
 .portfolio3{
     position:relative;
     background-color: #F0C7C2;
+}
+
+.portfolio4{
+    position:relative;
+    background-color: #AFF4C6;
 }
 
 #portfolio .row {
@@ -623,7 +635,7 @@ a:hover {
 #design .ui {
    background: rgb(224, 247, 255);
    padding: 8rem 0 3rem;
-    margin: 0;
+    /* margin: 0; */
 }
 /* End #design */
 
@@ -790,3 +802,9 @@ footer p {
         }
 }
 /* end media 360 */
+
+@media only screen and (min-width: 768px) {
+    .dropdown:hover .dropdown-menu {
+      display: block;
+    }
+  }

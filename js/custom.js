@@ -1,3 +1,5 @@
+
+
 // preloader
 $(window).load(function(){
     $('.preloader').fadeOut(1000); // set duration in brackets    
@@ -14,4 +16,7 @@ $(function() {
     $('.navbar-collapse a').click(function(){
         $(".navbar-collapse").collapse('hide');
     });
+   
 })
+
+
