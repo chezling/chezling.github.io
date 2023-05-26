@@ -803,8 +803,8 @@ footer p {
 }
 /* end media 360 */
 
-@media only screen and (min-width: 768px) {
+/* @media only screen and (min-width: 768px) {
     .dropdown:hover .dropdown-menu {
       display: block;
     }
-  }
+  } */
