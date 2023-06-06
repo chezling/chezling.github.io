@@ -32,6 +32,7 @@ body
     font-family: 'Bitter', serif;
     font-weight: bold;
     font-style: italic;
+    color: #a0a0a0;
 }
 ul li{
     list-style-type: disc;
@@ -253,24 +254,27 @@ a:hover {
     
 }
 .imbg {
-    background: url('../images/ItemManagement/headerbg.png') no-repeat;
+    /* background: url('../images/ItemManagement/headerbg.png') no-repeat; */
     background-color: #FFCD29;
     color: #fff;
 }
 .scmbg {
-    background: url('../images/scm2/headerbg.png') no-repeat;
+    /* background: url('../images/scm2/headerbg.png') no-repeat; */
     background-color: #0D99FF;
     color: #fff;
-
-    
 }
 .webbg {
-    background: url('../images/webui/headerbg.png') no-repeat;
+    /* background: url('../images/webui/headerbg.png') no-repeat; */
     background-color: #0C90EB;
     color: #fff;
 }
 .signupbg{
-    background: url('../images/SignUp/headerbg.png') no-repeat;
+    /* background: url('../images/SignUp/headerbg.png') no-repeat; */
+    background-color: #14AE5C;
+    color: #fff;
+}
+.ambg{
+    /* background: url('../images/Accuvmobile/headerbg.png') no-repeat; */
     background-color: #14AE5C;
     color: #fff;
 }
