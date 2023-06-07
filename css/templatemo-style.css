@@ -89,7 +89,10 @@ img
 a:hover {
     cursor: pointer;
 }
-
+.nopadding {
+    padding: 0 !important;
+    /* margin: 0 !important; */
+ }
 /* img */
 
 /* overlay */
@@ -106,8 +109,8 @@ a:hover {
     width: 100%;
        height: 100%;
        background: rgba(0, 0, 0, 0.4);
-       padding-top: 150px;
-       padding-bottom: 150px;
+       padding-top: 100px;
+       padding-bottom: 100px;
        color: #fff;
 }
 
@@ -274,8 +277,12 @@ a:hover {
     color: #fff;
 }
 .ambg{
-    /* background: url('../images/Accuvmobile/headerbg.png') no-repeat; */
     background-color: #14AE5C;
+    color: #fff;
+}
+
+.accuvbg{
+    background-color: #5839A0;
     color: #fff;
 }
 
@@ -529,7 +536,7 @@ a:hover {
     font-weight: bold;
     font-size: xxx-large;
 }
-#pricing .header {
+#pricing .header{
     /* font-weight: bold; */
     font-size: xx-large;
     padding-bottom: 1.5rem;
