@@ -439,11 +439,13 @@ BBA9E3
 #portfolio .col-md-4 {
     padding: 0;
     position: relative;
-    height: 520px;
-
+    height: 450px;
     background-repeat: no-repeat;
     background-size: cover;
+}
 
+#portfolio .col-md-4 img {
+    max-height: 350px;
 }
 
 #portfolio img {
