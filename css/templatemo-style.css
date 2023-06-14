@@ -108,7 +108,7 @@ a:hover {
 .work-overlay {
     width: 100%;
        height: 100%;
-       background: rgba(0, 0, 0, 0.4);
+       /* background: rgba(0, 0, 0, 0.4); */
        padding-top: 100px;
        padding-bottom: 100px;
        color: #fff;
@@ -256,35 +256,6 @@ a:hover {
     background: url('../images/homebg.png') no-repeat ;
     
 }
-.imbg {
-    /* background: url('../images/ItemManagement/headerbg.png') no-repeat; */
-    background-color: #FFCD29;
-    color: #fff;
-}
-.scmbg {
-    /* background: url('../images/scm2/headerbg.png') no-repeat; */
-    background-color: #0D99FF;
-    color: #fff;
-}
-.webbg {
-    /* background: url('../images/webui/headerbg.png') no-repeat; */
-    background-color: #0C90EB;
-    color: #fff;
-}
-.signupbg{
-    /* background: url('../images/SignUp/headerbg.png') no-repeat; */
-    background-color: #14AE5C;
-    color: #fff;
-}
-.ambg{
-    background-color: #14AE5C;
-    color: #fff;
-}
-
-.accuvbg{
-    background-color: #5839A0;
-    color: #fff;
-}
 
 #home h2 {
     font-size: 6rem;
@@ -413,7 +384,7 @@ a:hover {
 
 .portfolio2{
     position:relative;
-    background-color: #EBE0C5;
+    background-color: #a5e3da;
 }
 
 .portfolio3{
@@ -667,11 +638,6 @@ BBA9E3
 }
 /* end pricing */
 
-
-
-
-
-
 /* #design */
 #design h5 {
     font-weight: bold;
@@ -688,7 +654,7 @@ BBA9E3
 }
 #design .ui {
    /* background: rgb(224, 247, 255); */
-   padding: 8rem 0 3rem;
+   padding: 6rem 0 3rem;
     margin: 0;
 }
 #design .margin0 {
