@@ -494,7 +494,9 @@ BBA9E3
     /* ------------- */
 
 #portfolio .shadow {
-    box-shadow: 4px 4px 30px 0 rgba(0, 0, 0, 0.15);
+    /* -webkit-box-shadow:4px 4px 30px 0 rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 4px 4px 30px 0 rgba(0, 0, 0, 0.15); */
+    box-shadow: 4px 4px 30px 0 rgba(0, 0, 0, 0.075);
 }
 
 #portfolio .block {
