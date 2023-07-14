@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bitter:wght@200&display=swap');
@@ -30,7 +30,7 @@ body
 .caption{
     font-size: medium !important; 
     font-family: 'Bitter', serif;
-    font-weight: bold;
+    /* font-weight: bold; */
     font-style: italic;
     color: #a0a0a0;
 }
@@ -123,6 +123,7 @@ a:hover {
     height: 1px;
     border: 1px solid #e3e3e3;
 }
+
 /* over lay */
 
 /* start page container */
@@ -556,6 +557,26 @@ BBA9E3
     font-size: xx-large;
     padding-bottom: 1.5rem;
 }
+
+#pricing .header-prsntn{
+    font-size: xx-large;
+    padding-bottom: 1rem;
+    font-weight: 100;
+}
+
+#pricing .header-research{
+    font-size: x-large;
+    /* padding-bottom: 1rem; */
+    font-weight: 100;
+}
+
+#pricing .p-prsntn{
+    font-size: xx-large;
+    padding-bottom: 1.5rem;
+    font-weight: 300;
+    line-height: 1.2;
+}
+
 #pricing .shadow{
     box-shadow: 4px 4px 30px 0 rgba(0, 0, 0, 0.15);
 }
@@ -629,6 +650,10 @@ BBA9E3
     margin-top: 8rem;
     margin-bottom: 4rem;
 }
+#pricing .marginTop0 {
+    margin-top: 0 !important;
+}
+
 #pricing .img-isolate{
     margin-bottom: 2rem;
 }
@@ -636,9 +661,47 @@ BBA9E3
     padding-top: 8rem;
     padding-left: 4rem;
 }
+#pricing .image-right{
+    padding-top: 15px;;
+}
 #wireframe .row {
     margin-top: 5rem;
 }
+.process {
+    display: flex;
+    letter-spacing: .3rem;
+    padding-top: .5rem;
+}
+
+.process-center {
+    align-items: center;
+    justify-content: center;
+}
+
+.process-btn {
+    border: 1px solid #ddd;
+    border-radius: 62px;
+    padding: .3rem 2rem;
+    margin: 0 3rem 0 0;
+    background: #f0f0f0;
+}
+
+.process-btn-current {
+    color: #fff;
+    background: #333;
+    border-radius: 62px;
+    padding: .3rem 2rem;
+    margin-right: 3rem;
+}
+
+.process-nmbr {
+    border: none;
+    /* border-radius: 62px; */
+    padding: .3rem 0;
+    margin-right: 2rem;
+    background: #fff;
+}
+
 /* end pricing */
 
 /* #design */
