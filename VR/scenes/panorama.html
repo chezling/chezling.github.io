@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>360&deg; Image</title>
+    <meta name="description" content="360&deg; Image - A-Frame">
+
+    <!-- Include A-Frame library -->
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+
+    <!-- Include aframe-gui component -->
+    <script src="https://rawgit.com/rdub80/aframe-gui/master/dist/aframe-gui.min.js"></script>
+</head>
+
+<body>
+    <a-scene>
+
+        <a-text font="kelsonsans" value="Change room" width="6" position="-2.5 0.25 -1.5" rotation="0 15 0"></a-text>
+
+        <a-entity id="cameraRig" position="0 1.6 0">
+            <a-camera look-controls wasd-controls position="0 0 0">
+                <a-gui-cursor id="cursor" raycaster="objects: .interactive" fuse="false" design="ring">
+                </a-gui-cursor> <!-- /cursor -->
+            </a-camera> <!-- /camera -->
+        </a-entity>
+
+        <!-- <script>
+            AFRAME.registerComponent('room-switch', {
+                init: function () {
+                    var el = this.el;
+                    el.addEventListener('mouseenter', function () {
+                        // Handle the interaction here
+                        switchRoom(el.id); // Pass the clicked door ID to the switchRoom function
+                    });
+                }
+            });
+        
+            function switchRoom(doorId) {
+
+                // In bedroom to Show kitchen
+                if (doorId === 'br-to-kit') {
+                    document.getElementById('kitchen').setAttribute('visible', 'true');
+                    document.getElementById('bedroom').setAttribute('visible', 'false');
+                    document.getElementById('washroom').setAttribute('visible', 'false');
+                }
+
+                // In bedroom to Show washroom
+                if (doorId === 'br-to-wr') {
+                    document.getElementById('washroom').setAttribute('visible', 'true');
+                    document.getElementById('bedroom').setAttribute('visible', 'false');
+                    document.getElementById('kitchen').setAttribute('visible', 'false');
+                }
+
+                // In kitchen to Show bedroom
+                if (doorId === 'kit-to-br') {
+                    document.getElementById('bedroom').setAttribute('visible', 'true');
+                    document.getElementById('kitchen').setAttribute('visible', 'false');
+                    document.getElementById('washroom').setAttribute('visible', 'false');
+                }
+
+                // In kitchen to Show washroom
+                if (doorId === 'kit-to-wr') {
+                    document.getElementById('washroom').setAttribute('visible', 'true');
+                    document.getElementById('kitchen').setAttribute('visible', 'false');
+                    document.getElementById('bedroom').setAttribute('visible', 'false');
+                }
+
+                // In washroom to Show bedroom
+                if (doorId === 'wr-to-br') {
+                    document.getElementById('bedroom').setAttribute('visible', 'true');
+                    document.getElementById('washroom').setAttribute('visible', 'false');
+                    document.getElementById('kitchen').setAttribute('visible', 'false');
+                }
+
+                // In washroom to Show kitchen
+                if (doorId === 'wr-to-kit') {
+                    document.getElementById('kitchen').setAttribute('visible', 'true');
+                    document.getElementById('washroom').setAttribute('visible', 'false');
+                    document.getElementById('bedroom').setAttribute('visible', 'false');
+                }
+            }
+        </script> -->
+
+
+        <script>
+
+            AFRAME.registerComponent('room-switch', {
+                init: function () {
+                    var el = this.el;
+                    el.addEventListener('mouseenter', function () {
+                        switchRoom(el.id);
+                    });
+                }
+            });
+
+            function switchRoom(doorId) {
+                // Define the room IDs
+                var roomIds = ['bedroom', 'kitchen', 'washroom'];
+
+                // Determine the next room to show based on the clicked door
+                var nextRoomId;
+                if (doorId.endsWith('-to-kit')) {
+                    nextRoomId = 'kitchen';
+                } else if (doorId.endsWith('-to-wr')) {
+                    nextRoomId = 'washroom';
+                } else if (doorId.endsWith('-to-br')) {
+                    nextRoomId = 'bedroom';
+                } else {
+                    console.error('Invalid door ID:', doorId);
+                    return; // Exit the function if the door ID is invalid
+                }
+
+                // Hide all rooms
+                roomIds.forEach(function (roomId) {
+                    document.getElementById(roomId).setAttribute('visible', 'false');
+                });
+
+                // Show the next room
+                document.getElementById(nextRoomId).setAttribute('visible', 'true');
+                console.log('Switched to room:', nextRoomId);
+            }
+
+        </script>
+
+        <!-- Room 1 -->
+        <a-entity id="bedroom" position="0 0 0" room-switch visible="true">
+            <a-sky src="../textures/br.jpg" rotation="0 -130 0"></a-sky>
+
+            <!-- Door handle in Room 1 -->
+            <a-circle id="br-to-kit" position="0 0 -3" radius="0.25" material="color: blue; opacity: 0.7"
+                text="value: Goto Kitchen; color: white; align: center; width: 2" class="interactive" class="door"
+                room-switch></a-circle>
+
+            <!-- Door handle in Room 1 -->
+            <a-circle id="br-to-wr" position="2 0 -3" radius="0.25" material="color: blue; opacity: 0.7"
+                text="value: Goto Washroom; color: white; align: center; width: 2" class="interactive" class="door"
+                room-switch></a-circle>
+        </a-entity>
+
+        <!-- Room 2 (hidden initially) -->
+        <a-entity id="kitchen" position="0 0 0" visible="false" room-switch>
+            <a-sky src="../textures/kitchen.jpg" rotation="0 -130 0"></a-sky>
+
+            <!-- Door handle in Room 1 -->
+            <a-circle id="kit-to-br" position="0 0 -3" radius="0.25" material="color: blue; opacity: 0.7"
+                text="value: Goto Bedroom; color: white; align: center; width: 2" class="interactive" class="door"
+                room-switch></a-circle>
+
+            <!-- Door handle in Room 1 -->
+            <a-circle id="kit-to-wr" position="2 0 -3" radius="0.25" material="color: blue; opacity: 0.7"
+                text="value: Goto Washroom; color: white; align: center; width: 2" class="interactive" class="door"
+                room-switch></a-circle>
+        </a-entity>
+
+        <!-- Room 3 (hidden initially) -->
+        <a-entity id="washroom" position="0 0 0" visible="false" room-switch>
+            <a-sky src="../textures/wr.jpg" rotation="0 -130 0"></a-sky>
+
+            <!-- Door handle in Room 1 -->
+            <a-circle id="wr-to-br" position="0 0 -3" radius="0.25" material="color: blue; opacity: 0.7"
+                text="value: Goto Bedroom; color: white; align: center; width: 2" class="interactive" class="door"
+                room-switch></a-circle>
+
+            <!-- Door handle in Room 1 -->
+            <a-circle id="wr-to-kit" position="2 0 -3" radius="0.25" material="color: blue; opacity: 0.7"
+                text="value: Goto Kitchen; color: white; align: center; width: 2" class="interactive" class="door"
+                room-switch></a-circle>
+        </a-entity>
+
+    </a-scene>
+</body>
+
+</html>
